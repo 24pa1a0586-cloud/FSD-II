@@ -1,0 +1,153 @@
+export const menuCategories = [
+  'All',
+  'Starters',
+  'Main Course',
+  'Desserts',
+  'Beverages',
+];
+
+export const menuItems = [
+  // Starters
+  {
+    id: 1,
+    name: 'Paneer Tikka',
+    category: 'Starters',
+    price: 240,
+    description: 'Fresh cottage cheese cubes marinated in yogurt and Indian spices, grilled in a traditional tandoor.',
+    isVeg: true,
+  },
+  {
+    id: 2,
+    name: 'Crispy Corn Pepper Salt',
+    category: 'Starters',
+    price: 190,
+    description: 'Crispy golden sweet corn kernels tossed with crushed black pepper, spring onions, and green chilies.',
+    isVeg: true,
+  },
+  {
+    id: 3,
+    name: 'Tandoori Chicken Tikka',
+    category: 'Starters',
+    price: 290,
+    description: 'Tender boneless chicken morsels steeped in a spiced yogurt marinade, roasted over hot charcoal.',
+    isVeg: false,
+  },
+  {
+    id: 4,
+    name: 'Veg Spring Rolls',
+    category: 'Starters',
+    price: 180,
+    description: 'Golden crunchy wrappers filled with finely sliced vegetables, served with sweet chili dip.',
+    isVeg: true,
+  },
+  {
+    id: 5,
+    name: 'Garlic Butter Mushrooms',
+    category: 'Starters',
+    price: 210,
+    description: 'Plump button mushrooms sautéed in garlic-infused butter with fresh herbs and cracked pepper.',
+    isVeg: true,
+  },
+
+  // Main Course
+  {
+    id: 6,
+    name: 'Paneer Butter Masala',
+    category: 'Main Course',
+    price: 280,
+    description: 'Succulent paneer cubes simmered in a mildly sweet, rich tomato, cashew nut, and butter gravy.',
+    isVeg: true,
+  },
+  {
+    id: 7,
+    name: 'Dal Makhani',
+    category: 'Main Course',
+    price: 240,
+    description: 'Whole black lentils slow-cooked overnight with ginger, garlic, fresh cream, and churned butter.',
+    isVeg: true,
+  },
+  {
+    id: 8,
+    name: 'Butter Chicken (Murgh Makhani)',
+    category: 'Main Course',
+    price: 340,
+    description: 'Classic roasted chicken cooked in a velvety tomato gravy finished with cream and dried fenugreek.',
+    isVeg: false,
+  },
+  {
+    id: 9,
+    name: 'Hyderabadi Veg Dum Biryani',
+    category: 'Main Course',
+    price: 260,
+    description: 'Fragrant long-grain basmati rice layered with seasoned seasonal vegetables and saffron, cooked on dum.',
+    isVeg: true,
+  },
+  {
+    id: 10,
+    name: 'Chicken Dum Biryani',
+    category: 'Main Course',
+    price: 320,
+    description: 'Aromatic basmati rice cooked with marinated chicken pieces, caramelized onions, and whole spices.',
+    isVeg: false,
+  },
+  {
+    id: 11,
+    name: 'Butter Garlic Naan (2 Pcs)',
+    category: 'Main Course',
+    price: 90,
+    description: 'Soft tandoor-baked leavened bread brushed generously with minced garlic butter and fresh cilantro.',
+    isVeg: true,
+  },
+
+  // Desserts
+  {
+    id: 12,
+    name: 'Gulab Jamun with Vanilla Ice Cream',
+    category: 'Desserts',
+    price: 140,
+    description: 'Two warm, soft milk dumplings steeped in cardamom-scented sugar syrup, paired with vanilla ice cream.',
+    isVeg: true,
+  },
+  {
+    id: 13,
+    name: 'Royal Sizzling Brownie',
+    category: 'Desserts',
+    price: 180,
+    description: 'Warm dark chocolate fudge brownie served on a cast-iron sizzler with vanilla ice cream and hot chocolate sauce.',
+    isVeg: true,
+  },
+  {
+    id: 14,
+    name: 'Kesar Rasmalai (2 Pcs)',
+    category: 'Desserts',
+    price: 150,
+    description: 'Delicate cottage cheese patties soaked in saffron and cardamom-flavored thickened clotted milk.',
+    isVeg: true,
+  },
+
+  // Beverages
+  {
+    id: 15,
+    name: 'Fresh Mint Lime Cooler',
+    category: 'Beverages',
+    price: 110,
+    description: 'Chilled sparkling soda flavored with crushed garden mint, freshly squeezed lime, and black salt.',
+    isVeg: true,
+  },
+  {
+    id: 16,
+    name: 'Classic Cold Coffee with Ice Cream',
+    category: 'Beverages',
+    price: 130,
+    description: 'Thick blended espresso coffee shake topped with a scoop of vanilla bean ice cream and cocoa dusting.',
+    isVeg: true,
+  },
+  {
+    id: 17,
+    name: 'Spiced Buttermilk (Masala Chaas)',
+    category: 'Beverages',
+    price: 80,
+    description: 'Traditional home-style churned yogurt drink with roasted cumin, green chili, ginger, and coriander.',
+    isVeg: true,
+  },
+];

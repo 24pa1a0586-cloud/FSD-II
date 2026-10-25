@@ -1,0 +1,15 @@
+{
+  "name": "restaurant-reservation-system",
+  "version": "1.0.0",
+  "description": "Full Stack Restaurant Table Reservation System (MERN Stack)",
+  "scripts": {
+    "server": "npm --prefix server run dev",
+    "server:start": "npm --prefix server start",
+    "client": "npm --prefix client run dev",
+    "client:build": "npm --prefix client run build",
+    "seed": "npm --prefix server run seed"
+  },
+  "keywords": ["mern", "restaurant", "reservation", "react", "express", "mongodb"],
+  "author": "",
+  "license": "ISC"
+}
