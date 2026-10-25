@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import StatusBadge from '../components/StatusBadge';
+import { API_BASE_URL, handleApiResponse } from '../utils/api';
 
 const MyReservations = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -39,13 +40,9 @@ const MyReservations = () => {
 
     try {
       const response = await fetch(
-        `/api/reservations?email=${encodeURIComponent(emailToFetch.trim())}`
+        `${API_BASE_URL}/api/reservations?email=${encodeURIComponent(emailToFetch.trim())}`
       );
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || 'Failed to fetch reservations.');
-      }
+      const data = await handleApiResponse(response);
 
       setReservations(data.data || []);
       // Sync URL search params
@@ -83,7 +80,7 @@ const MyReservations = () => {
 
     try {
       const response = await fetch(
-        `/api/reservations/${selectedReservation._id}/cancel`,
+        `${API_BASE_URL}/api/reservations/${selectedReservation._id}/cancel`,
         {
           method: 'PATCH',
           headers: {
@@ -92,11 +89,7 @@ const MyReservations = () => {
         }
       );
 
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || 'Cancellation failed.');
-      }
+      const data = await handleApiResponse(response);
 
       // Update state locally with the updated reservation from DB
       setReservations((prev) =>

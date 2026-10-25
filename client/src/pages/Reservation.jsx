@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { API_BASE_URL, handleApiResponse } from '../utils/api';
 
 const timeSlots = [
   '12:00 PM',
@@ -117,7 +118,7 @@ const Reservation = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/reservations', {
+      const response = await fetch(`${API_BASE_URL}/api/reservations`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -133,11 +134,7 @@ const Reservation = () => {
         }),
       });
 
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || 'Failed to complete reservation.');
-      }
+      const data = await handleApiResponse(response);
 
       // Backend confirmation received
       setConfirmedReservation(data.data);

@@ -42,7 +42,7 @@ const sampleReservations = [
 
 const seedData = async () => {
   try {
-    console.log('Connecting to database:', MONGODB_URI);
+    console.log('Connecting to MongoDB database...');
     await mongoose.connect(MONGODB_URI, {
       serverSelectionTimeoutMS: 5000,
     });
